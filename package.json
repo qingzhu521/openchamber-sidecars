@@ -1,0 +1,16 @@
+{
+  "name": "openchamber-sidecars",
+  "version": "0.1.0",
+  "description": "Run the real opencode as OpenChamber's Local backend while isolated mcode/pi profiles start and stop with the app",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "opencode-with-sidecars": "./bin/opencode-with-sidecars"
+  },
+  "scripts": {
+    "start": "node src/launcher.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
