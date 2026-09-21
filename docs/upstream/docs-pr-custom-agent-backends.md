@@ -1,24 +1,32 @@
 # Docs PR: using a different coding agent
 
-Local clone: `openchamber-pi/reference/openchamber` (fork of `openchamber/openchamber`)
-Branch: `docs/custom-agent-backends`
-Commit: `9356b11` `docs: explain using a different coding agent as the backend`
+Status: filed as https://github.com/openchamber/openchamber/pull/3780
+
+Local clone: `openchamber-pi/reference/openchamber`
+Fork: `qingzhu521/openchamber` (remote `fork`)
+Branch: `docs/custom-agent-backends`, rebased on `main` at `896776d81`
+Commit: `b4f0dfc0a` `docs: explain using a different coding agent as the backend`
 Patch: `opencode-server-agent-backends.patch` (same directory)
 
 Touches one file: `packages/docs/content/docs/opencode-server.mdx` (+22 lines,
 no new page and no sidebar change, so no translation files are required).
 
-## Submit
+## Resubmit
 
 ```bash
 cd <clone>
-git push <your-fork> docs/custom-agent-backends
-gh pr create --repo openchamber/openchamber --base main --head <fork>:docs/custom-agent-backends \
+git fetch origin main && git rebase origin/main docs/custom-agent-backends
+git push fork docs/custom-agent-backends --force-with-lease
+```
+
+If the PR was closed and you want it again:
+
+```bash
+gh pr create --repo openchamber/openchamber --base main --head qingzhu521:docs/custom-agent-backends \
   --title "docs: explain using a different coding agent as the backend" \
   --body-file <this-file from "## Intent">
 ```
 
-Rebase on `main` first if the clone is stale.
 
 ## PR body
 

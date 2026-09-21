@@ -1,4 +1,4 @@
-From 9356b11b0b7ca72544aab4bb7f357ead98936c44 Mon Sep 17 00:00:00 2001
+From b4f0dfc0a0c49687fb5b8a93b7ea51cdf20800e6 Mon Sep 17 00:00:00 2001
 From: "xiuli.qz" <sanquan.qz@oceanbase.com>
 Date: Mon, 21 Sep 2026 13:55:35 +0800
 Subject: [PATCH] docs: explain using a different coding agent as the backend
@@ -8,7 +8,7 @@ Subject: [PATCH] docs: explain using a different coding agent as the backend
  1 file changed, 22 insertions(+)
 
 diff --git a/packages/docs/content/docs/opencode-server.mdx b/packages/docs/content/docs/opencode-server.mdx
-index fe9b6ba..dc5fab1 100644
+index fe9b6bace..dc5fab13a 100644
 --- a/packages/docs/content/docs/opencode-server.mdx
 +++ b/packages/docs/content/docs/opencode-server.mdx
 @@ -33,6 +33,27 @@ If you only need to change the port, set `OPENCODE_PORT` instead of `OPENCODE_HO
