@@ -5,6 +5,10 @@ Keep OpenChamber's **Local** backend as the real
 start and stop together with the app — no watchers, no LaunchAgents, no
 resident supervisor.
 
+[![GitHub stars](https://img.shields.io/github/stars/qingzhu521/openchamber-sidecars?style=flat&labelColor=100F0F&color=66800B)](https://github.com/qingzhu521/openchamber-sidecars/stargazers)
+[![License](https://img.shields.io/github/license/qingzhu521/openchamber-sidecars?style=flat&labelColor=100F0F&color=205EA6)](./LICENSE)
+[![OpenChamber](https://img.shields.io/badge/OpenChamber-1.24.x-100F0F?style=flat)](https://github.com/openchamber/openchamber)
+
 ```
 OpenChamber ──opencode API──▶ opencode (child of this launcher)
                                └─ sidecars: isolated `openchamber serve` profiles
@@ -34,7 +38,7 @@ so it can own the extra profiles too:
 Fail-open: if a sidecar cannot start, opencode is launched regardless — Local
 never depends on mcode/pi being healthy.
 
-## Setup
+## Quick start
 
 Point the main profile at the launcher (back up first):
 
@@ -76,6 +80,18 @@ Requires Node.js 22+. No dependencies, no build step.
 | `OCS_NODE_BIN` | auto-detected | node used by the `bin/` wrapper |
 
 Legacy `OCMC_*` names are still accepted as a fallback.
+
+## Compatibility
+
+| OpenChamber | Status |
+|---|---|
+| 1.24.x (desktop, API v1) | tested against 1.24.2 |
+| other versions | not tested |
+
+The launcher does not patch OpenChamber. It uses the desktop app's
+`opencodeBinary` setting and the documented `openchamber serve --port P
+--foreground` command with `OPENCHAMBER_DATA_DIR`, so it only breaks if those
+change.
 
 ## Standalone check
 
